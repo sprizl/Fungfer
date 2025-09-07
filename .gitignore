@@ -23,10 +23,21 @@ data_*/
 *.user
 *.cache
 
-# VS Code / VS
-.vscode/
+# Ignore Godot editor user settings
+.godot/editor/
+.godot/mono/metadata/
+.godot/mono/*.csproj.user
+.godot/mono/*.csproj.DotSettings
+.godot/mono/FungFer.AssemblyInfo.cs
+
+# Ignore cache
+.import/
+filesystem_cache*
+
+# VS / build cache
 .vs/
-*.suo
+*.pidb
+
 
 # OS junk
 .DS_Store
