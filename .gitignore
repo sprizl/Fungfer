@@ -28,7 +28,7 @@ data_*/
 .godot/mono/metadata/
 .godot/mono/*.csproj.user
 .godot/mono/*.csproj.DotSettings
-.godot/mono/FungFer.AssemblyInfo.cs
+.godot/mono/temp/
 
 # Ignore cache
 .import/
