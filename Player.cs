@@ -77,7 +77,6 @@ public partial class Player : CharacterBody2D
 			}
 			else
 			{
-				GD.Print(lastDirection.X);
 				//1 = right
 				sprite.FlipH = lastDirection.X > 0;
 				sprite.Play("Idle");
