@@ -1,0 +1,9 @@
+StaticBody2D
+CollisionShape2D
+TileMapLayer
+TileMap
+AnimationPlayer
+Sprite2D
+AnimatedSprite2D
+Node2D
+CharacterBody2D
