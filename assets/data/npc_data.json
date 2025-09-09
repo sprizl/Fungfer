@@ -1,0 +1,14 @@
+[
+  {
+	"id": "npc_001",
+	"name": "Old Farmer",
+	"dialogues": ["Hello!", "Need help with crops?"],
+	"position": { "x": 10, "y": 20 }
+  },
+  {
+	"id": "npc_002",
+	"name": "Shopkeeper",
+	"map": "Forest",
+	"spawn_position": { "x": 400, "y": 100 }
+  }
+]

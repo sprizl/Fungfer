@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class Player : CharacterBody2D
 {
@@ -10,8 +9,30 @@ public partial class Player : CharacterBody2D
 	public const float RunSpeed = 100.0f;
 	public const float JumpVelocity = -400.0f;
 
+	[Signal]
+    public delegate void ChangeMapEventHandler(string nextMapPath);
+	public Vector2 CurrentMapSize = Vector2.Zero;
+
+
 	public override void _Ready()
 	{
+		GD.Print($"[Player] Ready = {GetInstanceId()}");
+		// ใช้ global singleton
+		var mapManager = MapManager.Instance;
+		if (MapManager.Instance == null)
+		{
+			GD.PushError("[Player] ❌ MapManager.Instance is null!");
+			return;
+		}
+
+		var mapContainer = GetTree().CurrentScene.GetNodeOrNull("MapContainer");
+		if (mapContainer == null)
+		{
+			GD.PushError("[Player] ❌ Cannot find MapContainer!");
+			return;
+		}
+		MapManager.Instance.RegisterPlayer(this, mapContainer);
+
 		sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		sprite.Play("Idle_Down");
 	}
@@ -27,7 +48,6 @@ public partial class Player : CharacterBody2D
 		}
 
 		// Handle Jump.
-		GD.Print(Input.IsActionJustPressed("ui_accept"));
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
@@ -50,20 +70,9 @@ public partial class Player : CharacterBody2D
 		{
 			lastDirection = direction;
 
-			if (Mathf.Abs(horizontal) > 0)
-			{
-				//1 = right
-				sprite.FlipH = horizontal > 0;
-				sprite.Play(isRunning ? "Run" : "Walk");
-			}
-			else if (vertical < 0)
-			{
-				sprite.Play(isRunning ? "Run_Up" : "Walk_Up");
-			}
-			else
-			{
-				sprite.Play(isRunning ? "Run_Down" : "Walk_Down");
-			}
+			//1 = right
+			sprite.FlipH = horizontal > 0;
+			sprite.Play(isRunning ? "Run" : "Walk");
 		}
 		else
 		{

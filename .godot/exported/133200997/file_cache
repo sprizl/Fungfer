@@ -1,1 +1,5 @@
-res://Game.tscn::d1b0ae8d8a8af0d63ac359bee3527e77::1757262850::res://.godot/exported/133200997/export-6455994a605b35b7d96f8362f3055c4a-Game.scn
+res://scenes/maps/Map_Grassland.tscn::a5fc3218eefc4b26810458eba8dd461e::1757445291::res://.godot/exported/133200997/export-007507472cd55e264eeb51ac03469ce4-Map_Grassland.scn
+res://scenes/maps/Map_Village.tscn::1b0aebd4d6c2b3b1908c2a39ad0376b2::1757445291::res://.godot/exported/133200997/export-f71131654423866aac09afc04f251005-Map_Village.scn
+res://scenes/maps/Map_Start.tscn::01959e77d455a1f74c96c5cc7909bb82::1757445292::res://.godot/exported/133200997/export-e4861b8dbf7d44bf6ad52551b43cf05f-Map_Start.scn
+res://scenes/player/Player.tscn::31138c48c0be63a3a8c79cec8c472a80::1757445291::res://.godot/exported/133200997/export-a4e9bb150591131ae307f440fab940ce-Player.scn
+res://scenes/MainScene.tscn::140537c237699757de7951c3e8e185cc::1757445291::res://.godot/exported/133200997/export-f42045b8d26c557411d54b08a027ee0f-MainScene.scn

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://3icqdchu32v5"]
+
+[ext_resource type="PackedScene" uid="uid://dokp8lv70cuf7" path="res://scenes/player/Player.tscn" id="4_611at"]
+[ext_resource type="Script" uid="uid://5rqnnlkvdngx" path="res://managers/InventoryManager.cs" id="6_o3jky"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="InventoryManager" type="Node" parent="."]
+script = ExtResource("6_o3jky")
+
+[node name="Player" parent="." instance=ExtResource("4_611at")]
+position = Vector2(285, 220)
+
+[node name="MapContainer" type="Node2D" parent="."]

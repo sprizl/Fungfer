@@ -1,0 +1,9 @@
+[
+  {
+    "id": "item_potion",
+    "name": "Potion",
+    "type": "consumable",
+    "effect": "heal",
+    "value": 50
+  }
+]

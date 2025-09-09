@@ -1,0 +1,29 @@
+{
+  "Map_Start": {
+    "scene": "res://scenes/maps/Map_Start.tscn",
+    "neighbors": {
+      "right": "Map_Village"
+    }
+  },
+  "Map_Village": {
+    "scene": "res://scenes/maps/Map_Village.tscn",
+    "neighbors": {
+      "left": "Map_Start",
+      "up": "Map_Hills"
+    }
+  },
+  "Map_Hills": {
+    "scene": "res://scenes/maps/Map_Hills.tscn",
+    "neighbors": {
+      "down": "Map_Village",
+      "left": "Map_Snow"
+    }
+  },
+  "Map_Snow": {
+    "scene": "res://scenes/maps/Map4.tscn",
+    "neighbors": {
+      "right": "Map_Hills",
+      "down": "Map_MainScene"
+    }
+  }
+}
